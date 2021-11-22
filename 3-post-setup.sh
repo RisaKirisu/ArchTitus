@@ -13,7 +13,7 @@ echo "--------------------------------------"
 echo "-- GRUB EFI Bootloader Install&Check--"
 echo "--------------------------------------"
 if [[ -d "/sys/firmware/efi" ]]; then
-    grub-install --efi-directory=/mnt/boot/ ${DISK}
+    grub-install --removable --efi-directory=/boot/ ${DISK}
 fi
 grub-mkconfig -o /boot/grub/grub.cfg
 
